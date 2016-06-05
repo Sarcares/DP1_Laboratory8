@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+footer {
+    /*border-top: 3px dotted black;*/
+    font-family: times;
+    font-style: italic;
+}
+
+#tabella {
+    border: 1px solid black;
+    margin-top: 7px;
+    text-align: center;
+}
+
+#tabella TH, TR, TD {
+    border: 2px solid black;
+    padding: 2px;
+}
