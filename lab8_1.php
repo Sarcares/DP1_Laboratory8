@@ -14,9 +14,7 @@
 		$page = $_COOKIE["pag"] + 1;
 		setcookie("pag", $page);
 	}
-?>
-
-<?php
+	
 	$conn = mysqli_connect("localhost", "root", "", "example");
 	if($conn == false)
 		die("Connection Error (".mysqli_connect_errno().")".mysqli_connect_error());
@@ -90,7 +88,7 @@
 				<?php
 					$row = mysqli_fetch_array($res);
 					while($row != NULL) {
-						echo "<TR><TD>".$row['Descrizione']."</TD><TD>".$row['Prezzo']."</TD><TD>".$row['Quantita']."</TD></TR>";
+						echo "<TR><TD>".htmlentities($row['Descrizione'])."</TD><TD>".$row['Prezzo']."</TD><TD>".$row['Quantita']."</TD></TR>";
 						$row = mysqli_fetch_array($res);
 					}
 					mysqli_free_result($res);
